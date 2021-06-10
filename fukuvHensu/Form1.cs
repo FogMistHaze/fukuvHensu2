@@ -12,7 +12,7 @@ namespace fukuvHensu
 {
     public partial class Form1 : Form
     {
-        int vx = 0, vy = 0;
+        int vx = -20, vy = -10;
         string kao = "(゜o゜)";
 
         public Form1()
@@ -22,35 +22,36 @@ namespace fukuvHensu
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("幅" + ClientSize.Width);
-            MessageBox.Show("高さ" + ClientSize.Height);
+            //MessageBox.Show("幅" + ClientSize.Width);
+            //MessageBox.Show("高さ" + ClientSize.Height);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             //int textBox1 = label1.Left + 10;
             //int textBox2 = label1.Top + 10;
+            
             //int textBox1 = vx;
             //int textBox2 = vy;
 
             label1.Left += vx;
             label1.Top += vy;
 
-            if(label1.Left<0)
+            if (label1.Left < 0) 
             {
-                vx = 10;
+                vx = Math.Abs(vx);
             }
-            if(label1.Right>ClientSize.Width)
+            if (label1.Left + label1.Width > ClientSize.Width) 
             {
-                vx = -10;
+                vx = -Math.Abs(vx);
             }
             if (label1.Top < 0)
             {
-                vy = 10;
+                vy = Math.Abs(vy);
             }
-            if(label1.Bottom>ClientSize.Height)
+            if (label1.Bottom > ClientSize.Height) 
             {
-                vy = -10;
+                vy = -Math.Abs(vy);
             }
 
             string t = label1.Text;
