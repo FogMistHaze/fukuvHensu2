@@ -12,6 +12,8 @@ namespace fukuvHensu
 {
     public partial class Form1 : Form
     {
+        int vx = 0, vy = 0;
+
         public Form1()
         {
             InitializeComponent();
@@ -19,8 +21,10 @@ namespace fukuvHensu
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int textBox1 = label1.Left + 10;
-            int textBox2 = label1.Top + 10;
+            //int textBox1 = label1.Left + 10;
+            //int textBox2 = label1.Top + 10;
+            int textBox1 = vx;
+            int textBox2 = vy;
         }
 
         private void button1_Click(object sender, EventArgs e)
