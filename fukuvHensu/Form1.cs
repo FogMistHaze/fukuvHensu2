@@ -40,7 +40,7 @@ namespace fukuvHensu
             {
                 vx = 10;
             }
-            if(label1.Right>800)
+            if(label1.Right>ClientSize.Width)
             {
                 vx = -10;
             }
@@ -48,7 +48,7 @@ namespace fukuvHensu
             {
                 vy = 10;
             }
-            if(label1.Bottom>450)
+            if(label1.Bottom>ClientSize.Height)
             {
                 vy = -10;
             }
