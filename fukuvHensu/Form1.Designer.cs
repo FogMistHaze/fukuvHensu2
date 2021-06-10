@@ -57,6 +57,7 @@ namespace fukuvHensu
             this.textBox1.Size = new System.Drawing.Size(100, 23);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "0";
+            this.textBox1.Visible = false;
             // 
             // textBox2
             // 
@@ -65,6 +66,7 @@ namespace fukuvHensu
             this.textBox2.Size = new System.Drawing.Size(100, 23);
             this.textBox2.TabIndex = 2;
             this.textBox2.Text = "0";
+            this.textBox2.Visible = false;
             // 
             // button1
             // 
@@ -75,6 +77,7 @@ namespace fukuvHensu
             this.button1.TabIndex = 3;
             this.button1.Text = "☝";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -85,6 +88,7 @@ namespace fukuvHensu
             this.button2.TabIndex = 4;
             this.button2.Text = "☜";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -95,6 +99,7 @@ namespace fukuvHensu
             this.button3.TabIndex = 5;
             this.button3.Text = "☞";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -105,6 +110,12 @@ namespace fukuvHensu
             this.button4.TabIndex = 6;
             this.button4.Text = "☟";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
